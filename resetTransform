@@ -1,0 +1,51 @@
+all_selection_ctrls = cmds.ls(selection=True)
+
+trans_ls = []
+rot_ls = []
+
+for i in all_selection_ctrls:
+    check_T_x = cmds.getAttr(i + ".translateX", se=True)
+    check_T_y = cmds.getAttr(i + ".translateY", se=True)
+    check_T_z = cmds.getAttr(i + ".translateZ", se=True)
+    check_R_x = cmds.getAttr(i + ".rotateX", se=True)
+    check_R_y = cmds.getAttr(i + ".rotateY", se=True)
+    check_R_z = cmds.getAttr(i + ".rotateZ", se=True)
+    if check_T_x == True:
+        translate_X = i + ".translateX"
+        trans_ls.append(translate_X)
+    else:
+         pass
+    if check_T_y == True:
+        translate_Y = i + ".translateY"
+        trans_ls.append(translate_Y)
+    else:
+         pass        
+    if check_T_z == True:
+        translate_Z = i + ".translateZ"
+        trans_ls.append(translate_Z)
+    else:
+         pass                    
+         
+    if check_R_x == True:
+        rotate_X = i + ".rotateX"
+        rot_ls.append(rotate_X)
+    else:
+        pass
+        
+    if check_R_y == True:
+        rotate_Y = i + ".rotateY"
+        rot_ls.append(rotate_Y)
+    else:
+        pass
+
+    if check_R_z == True:
+        rotate_Z = i + ".rotateZ"
+        rot_ls.append(rotate_Z)
+    else:
+        pass
+        
+for ctrl_t in trans_ls:
+    cmds.setAttr(ctrl_t, 0)
+for ctrl_r in rot_ls:
+    cmds.setAttr(ctrl_r, 0)
+    
