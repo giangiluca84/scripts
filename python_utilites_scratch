@@ -1,3 +1,6 @@
 data = [1,2,3,4,5,6, 7, 8, 9 , 10]  #take every two number of a list IMP
 for i,k in zip(data[0::2], data[1::2]):
     print i
+
+data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]  #separata list in other list with each 2 elements
+data_each_Two = [data[i:i+2] for i in range(0, len(data), 1)]
