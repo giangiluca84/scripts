@@ -8,3 +8,13 @@ data_each_Two = [data[i:i+2] for i in range(0, len(data), 1)]
 a = ["foo", "bar"]
 b = [1, 2, 3]
 list_combined = [(x,y) for x in a for y in b] #all possible combinations between two list
+
+
+data = [1,2,3,4,5,6, 7, 8, 9 , 10]
+max_value = None  #find the max value of a list
+for num in data:
+    if (max_value is None or num > max_value):
+        max_value = num
+ 
+number = 1.32422453432
+num_formatted = '{0:.3g}'.format(number) #format a number at second dexicaml
