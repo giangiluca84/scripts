@@ -2,7 +2,7 @@ data = [1,2,3,4,5,6, 7, 8, 9 , 10]  #take every two number of a list IMP
 for i,k in zip(data[0::2], data[1::2]):
     print i
 
-data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]  #separata list in other list with each 2 elements
+data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]  #separate list in other list with each 2 elements
 data_each_Two = [data[i:i+2] for i in range(0, len(data), 1)]
 
 a = ["foo", "bar"]
@@ -17,4 +17,23 @@ for num in data:
         max_value = num
  
 number = 1.32422453432
-num_formatted = '{0:.3g}'.format(number) #format a number at second dexicaml
+num_formatted = '{0:.3g}'.format(number) #format a number at second deximal
+
+
+
+sourceMesh = cmds.ls(sl=True)[0].split('.')[0] #query skinCluster for current mesh
+skinMuscle = cmds.ls(selection=True)
+ls_History = cmds.listHistory(skinMuscle)
+skinCl_source = cmds.ls(ls_History, type='skinCluster')
+
+
+
+vertex_values_r = [] #creation of a list with sublistes with 3 elements(vertex + weight + attachment_name)
+for w, v, at in zip(attach_weight_ls_TOT, n_vertex, atch_ls):
+    list1 = []
+    list1.append(v)
+    f = float(w[0])
+    list1.append(f)
+    list1.append(at)
+    vertex_values_r.append(list1)
+
