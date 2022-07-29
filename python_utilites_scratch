@@ -22,8 +22,7 @@ num_formatted = '{0:.3g}'.format(number) #format a number at second deximal
 
 
 sourceMesh = cmds.ls(sl=True)[0].split('.')[0] #query skinCluster for current mesh
-skinMuscle = cmds.ls(selection=True)
-ls_History = cmds.listHistory(skinMuscle)
+ls_History = cmds.listHistory(sourceMesh)
 skinCl_source = cmds.ls(ls_History, type='skinCluster')
 
 
