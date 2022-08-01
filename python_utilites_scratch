@@ -38,7 +38,18 @@ for w, v, at in zip(attach_weight_ls_TOT, n_vertex, atch_ls):
     
     
     
-    
-myList = ['a', 'b', 'a', 'c', 'b', 'a', 'c', 'd', 'd']  #check if a list has duplicates and returnes the duplicates only
-dupl = [myList[i] for i in range(len(myList)) if i == myList.index(myList[i])]
+
+
+users = ['AmyP', 'ollie3', 'shoeguy', 'kyliek', 'ollie3',     # check for duplicates print unique names
+         'stewieboy', 'csealker', 'shoeguy', 'cdriver', 'kyliek']
+dup_free  = list(set(users))
+print(dup_free)
+
+
+users = ['AmyP', 'ollie3', 'shoeguy', 'kyliek', 'ollie3',  # check for duplicates print duplicates only
+         'stewieboy', 'csealker', 'shoeguy', 'cdriver', 'kyliek']
+         
+tmp  = set()
+dups = set(x for x in users if (x in tmp or tmp.add(x)))
+print(list(dups))
 
