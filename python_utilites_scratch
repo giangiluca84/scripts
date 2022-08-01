@@ -35,4 +35,10 @@ for w, v, at in zip(attach_weight_ls_TOT, n_vertex, atch_ls):
     list1.append(f)
     list1.append(at)
     vertex_values_r.append(list1)
+    
+    
+    
+    
+myList = ['a', 'b', 'a', 'c', 'b', 'a', 'c', 'd', 'd']  #check if a list has duplicates and returnes the duplicates only
+dupl = [myList[i] for i in range(len(myList)) if i == myList.index(myList[i])]
 
